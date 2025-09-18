@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+*.log
+
+# OS/editor
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# SLURM logs & local runs
+slurm-*.out
+slurm-*.err
+*.out
+*.err
+
+# Data & outputs (keep folder, ignore contents)
+datasets/*
+!datasets/README.md
+!datasets/*.md
+
+checkpoints/*
+!checkpoints/.gitkeep
+
+# Generated samples / npz dumps (commit only handpicked examples)
+samples/*
+!samples/README.md
+
+# Docker build stuff
+dist/
+build/
