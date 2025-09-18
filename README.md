@@ -143,3 +143,31 @@ gain_XXXX_YY.png
 
 ![Unconditional sample](docs/img/unconditional_example.png)
 
+
+---
+
+## 📂 Unconditional dataset & filename convention
+
+This repo includes an **unconditional** dataset used for compatibility with our training/eval code.  
+We renamed images to the format:
+
+gain_XXXX_YY.png
+
+- `XXXX` (4 digits) = **building layout ID** (zero-padded to 4)
+- `YY` (2 digits)   = **transmitter position index** in the map (0–79 for 80 total variations)
+
+**Examples**
+
+| Filename           | Layout ID | TX index |
+|--------------------|-----------|----------|
+| `gain_0156_32.png` | 0156      | 32       |
+| `gain_0249_07.png` | 0249      | 07       |
+| `gain_0674_75.png` | 0674      | 75       |
+
+> The actual dataset files live locally under `datasets/unconditional/` and are **ignored by git**.  
+> Only lightweight placeholders (like this README) are tracked.
+
+**Sample preview**
+
+![Unconditional sample](docs/img/unconditional_example.png)
+
