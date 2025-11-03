@@ -46,7 +46,7 @@ def main():
     
     # Changed: Force spatial conditioning instead of class conditioning
     model_and_diffusion_kwargs["class_cond"] = False  # Disable class conditioning
-    model_and_diffusion_kwargs["use_spatial_conditioning"] = True  # Enable spatial conditioning
+    model_and_diffusion_kwargs["spatial_cond"] = True  # Enable spatial conditioning
     
     model, diffusion = create_model_and_diffusion(**model_and_diffusion_kwargs)
     model.to(dist_util.dev())
@@ -150,7 +150,7 @@ def main():
 def create_argparser():
     defaults = dict(
         data_dir="/home/pariamdz/projects/def-hinat/pariamdz/RadioDiff/data/",  # Changed: Default to radio data path
-        dataset_variant="radio",  # New: Radio dataset variant
+        #dataset_variant="radio",  # New: Radio dataset variant
         schedule_sampler="uniform",
         lr=1e-4,
         weight_decay=0.0,

@@ -1,3 +1,4 @@
+# ------------------------
 # Python
 __pycache__/
 *.py[cod]
@@ -6,30 +7,49 @@ __pycache__/
 env/
 *.log
 
-# OS/editor
+# ------------------------
+# OS/editor junk
 .DS_Store
 *.swp
 .vscode/
 .idea/
 
+# ------------------------
 # SLURM logs & local runs
 slurm-*.out
 slurm-*.err
 *.out
 *.err
 
-# Data & outputs (keep folder, ignore contents)
+# ------------------------
+# Datasets & samples
 datasets/*
-!datasets/README.md
-!datasets/*.md
+!datasets/**/
+!datasets/**/*.md
+!datasets/**/.gitkeep
 
+samples/*
+!samples/**/
+!samples/**/*.md
+!samples/**/.gitkeep
+
+# ------------------------
+# Checkpoints
 checkpoints/*
 !checkpoints/.gitkeep
 
-# Generated samples / npz dumps (commit only handpicked examples)
-samples/*
-!samples/README.md
+# ------------------------
+# Large/binary files
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.keras
+*.onnx
+*.npz
 
-# Docker build stuff
+# ------------------------
+# Docker build artifacts
 dist/
 build/
