@@ -53,3 +53,7 @@ checkpoints/*
 # Docker build artifacts
 dist/
 build/
+
+# Exclude dataset images
+datasets/unconditional/*.png
+datasets/unconditional/

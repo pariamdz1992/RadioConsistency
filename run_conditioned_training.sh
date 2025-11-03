@@ -17,7 +17,7 @@ module load python/3.11 scipy-stack cuda/12.2 mpi4py opencv
 source ~/consistency_models_env/bin/activate
 
 # Change to consistency_models directory
-cd /home/pariamdz/projects/def-hinat/pariamdz/RadioDiff/consistency_models
+cd /home/pariamdz/projects/def-hinat/pariamdz/RadioDiff/consistency_models_backup_20251103_104500
 
 # Set environment variables
 export CUDA_VISIBLE_DEVICES=0
@@ -30,7 +30,7 @@ echo "Date: $(date)"
 echo "GPU: $(nvidia-smi -L)"
 
 # Run conditioned consistency training
-python cm_train_conditioned.py \
+python scripts/cm_train_conditioned.py \
     --data_dir /home/pariamdz/projects/def-hinat/pariamdz/RadioDiff/data/ \
     --image_size 64 \
     --batch_size 8 \
